@@ -4,7 +4,7 @@ This is a sample Next.js app showing you how to verify a user owns an account up
 
 ## Thanks
 
-First of all, thank you SO MUCH to Greg who helped me with literally all of this. This would not be possible without his help (and he's also the one who developed this slick stuff!). Check out his GitHub here: https://github.com/gregsantos
+First of all, thank you SO MUCH to Greg who helped me with literally all of this. This would not be possible without his help (and he's also the one who developed this slick stuff!). Check out his Twitter here: https://twitter.com/gregsantos
 
 ## What is this all about?
 
