@@ -52,6 +52,29 @@ const resolver = async () => {
 }
 ```
 
+This will generate an account proof that looks like this:
+```javascript
+{
+  f_type: "Service",                    // Its a service!
+  f_vsn: "1.0.0",                       // Follows the v1.0.0 spec for the service
+  type: "account-proof",                // The type of service it is
+  method: "DATA",                       // Its data!
+  uid: "awesome-wallet#account-proof",  // A unique identifier for the service
+  data: {
+    f_type: "account-proof",
+    f_vsn: "2.0.0"
+
+    // The user's address (8 bytes, i.e 16 hex characters)
+    address: "0xf8d6e0586b0a20c7",                 
+
+    // Nonce signed by the current account-proof (minimum 32 bytes in total, i.e 64 hex characters)
+    nonce: "75f8587e5bd5f9dcc9909d0dae1f0ac5814458b2ae129620502cb936fde7120a",
+
+    signatures: [CompositeSignature],
+  }
+}
+```
+
 ### Verifying an account proof
 
 This is done by passing the account proof to a backend (`./utils/login.js`) and verifying both the nonce and the account proof (`./pages/api/verify.js`).
